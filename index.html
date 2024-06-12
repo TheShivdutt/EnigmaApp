@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigma Messaging App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enigma Messaging App</h1>
+        
+        <div>
+            <h2>Rotor Settings</h2>
+            <label for="rotor1">Rotor 1 Position:</label>
+            <input type="number" id="rotor1" min="0" max="25" value="0">
+            <label for="rotor2">Rotor 2 Position:</label>
+            <input type="number" id="rotor2" min="0" max="25" value="0">
+            <label for="rotor3">Rotor 3 Position:</label>
+            <input type="number" id="rotor3" min="0" max="25" value="0">
+        </div>
+        
+        <div>
+            <h2>Plugboard Settings</h2>
+            <div id="plugboardSettings">
+                <div>
+                    <input type="text" class="plugA" maxlength="1" placeholder="A">
+                    <input type="text" class="plugB" maxlength="1" placeholder="B">
+                </div>
+                <div>
+                    <input type="text" class="plugA" maxlength="1" placeholder="C">
+                    <input type="text" class="plugB" maxlength="1" placeholder="D">
+                </div>
+                <div>
+                    <input type="text" class="plugA" maxlength="1" placeholder="E">
+                    <input type="text" class="plugB" maxlength="1" placeholder="F">
+                </div>
+                <div>
+                    <input type="text" class="plugA" maxlength="1" placeholder="G">
+                    <input type="text" class="plugB" maxlength="1" placeholder="H">
+                </div>
+                <div>
+                    <input type="text" class="plugA" maxlength="1" placeholder="I">
+                    <input type="text" class="plugB" maxlength="1" placeholder="J">
+                </div>
+            </div>
+        </div>
+
+        <textarea id="inputMessage" placeholder="Enter your message"></textarea>
+        <button onclick="processMessage('encode')">Encode</button>
+        <button onclick="processMessage('decode')">Decode</button>
+        <textarea id="outputMessage" placeholder="Encoded/Decoded message"></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
